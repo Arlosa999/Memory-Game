@@ -1,0 +1,31 @@
+Here is the description of the game 
+Page on
+Rules:
+
+Game Setup:
+
+The game board consists of a grid of face-down cards.
+Cards are arranged randomly on the board, with each card having an identical twin.
+
+Card Matching:
+
+Each turn, the player flips over two cards.
+If the cards match, they remain face-up, and the player earns points.
+If the cards do not match, they are turned face-down again, and the player's score is not affected.
+
+Game Completion:
+
+The game is won when all pairs of cards are successfully matched and face-up.
+Players strive to complete the game with the fewest moves and in the shortest time possible.
+
+Scoring:
+
+Points are awarded for each successful card match.
+Bonus points may be awarded for completing the game quickly or with minimal moves.
+
+
+Tips for Success:
+
+Concentrate and focus on the card positions.
+Create a mental map of the card pairs.
+Develop a strategy for remembering card locations efficiently.

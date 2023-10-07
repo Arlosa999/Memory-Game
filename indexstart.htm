@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory Game</title>
+    <script src="./logic.js" defer ></script>
+    <link rel="stylesheet" href="./style.css">
+    <a href="indexgame.html">Game Page</a>
+    <a href="indexlose.html">Lose Page</a>
+    <a href="indexwin.html">Win Page</a>
+</head>
+<body>
+    <h1>Memory Game</h1>
+    <div class="rules">
+        <h3>Game Rules</h3>
+<!--       <div> <img id="froggy"src="https://i.pinimg.com/originals/63/1b/07/631b078485b7619bdb3c96731029cac4.gif" alt="Froggy"></div> -->
+            <div class="paragraph">
+                <h4>Game Setup: </h4>
+                <p>The game board consists of a grid of face-down cards.
+                Cards are arranged randomly on the board, with each card having an identical twin.</p>
+                <h4>Card Matching:</h4>
+                <p>Each turn, the player flips over two cards.
+                    If the cards match, they remain face-up, and the player earns points.
+                    If the cards do not match, they are turned face-down again, and the player's score is not affected.</p>
+                <h4>Game Completion: </h4>
+                <p>The game is won when all pairs of cards are successfully matched and face-up.
+                    The game is lost when there more than three attemts to open the same card without finding a pair. 
+                    Players strive to complete the game with the fewest moves and in the shortest time possible.</p>
+                <h4>Tips for Success: </h4>
+                <ul>
+                    <li>Concentrate and focus on the card positions.</li>
+                    <li>Create a mental map of the card pairs.</li>
+                    <li>Develop a strategy for remembering card locations efficiently.</li>
+                </ul>
+            </div>
+    </div>
+    <div class="startButton">
+        <button class="play">Play</button>
+    </div>
+</body>
+</html>
