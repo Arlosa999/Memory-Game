@@ -1,3 +1,4 @@
+/* Start Page  */
 h1{
     text-align: center;
 }
@@ -7,11 +8,47 @@ h3{
 .startButton{
     text-align: center;
 }
-/* #froggy{
+
+/* Game Page */
+body{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.trackerbox{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 50vw;
+    border: 15px solid green;
+    padding: 2%;
+    margin: 20px;
+}
+.trackers{
+    display: inline-block;
+    align-items: center;
+}
+.gamecontainer{
+    display:flex;
+    background-color: teal; 
+    justify-content: space-between;
+    align-items: center;
+    width: 50vw;
+    height: 40vw;
+    border: 15px solid green;
+    padding: 2%;
+    margin: 20px;
+    flex: wrap;
+}
+.circle-1{
+    width: 50px;
+    height: 50px;
+    background-color: white;
+    display: inline-flex;
+}
+
+.reset{
     text-align: center;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 50%;
-    height: 50%;
-} */
+}
