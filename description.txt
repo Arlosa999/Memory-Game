@@ -28,4 +28,20 @@ Tips for Success:
 
 Concentrate and focus on the card positions.
 Create a mental map of the card pairs.
-Develop a strategy for remembering card locations efficiently.
+
+
+//Pseudocode for the overall game play
+create 4 html files- start/game/lose/win
+create game file- all 16 cards back-end cards need hide under the front-end cards 
+//make sure user can click on each card 
+//make cards to flip when you click on the card
+//make player only to click 2 cards max and reverse if they are not matching or keep back-card open if 2 images are matching. 
+//implemennt a tmer for no longer than 30 seconds
+//create 3 lives for the card if user click on one card more than 3 times the game is over 
+//make a reset button
+//make cards shuffle every time you reset the button 
+//show win page when user matched all 16 cards in 30 seconds 
+//show game is over if user toom more than 30 seconds or if clicked on the same cards more than 3 times 
+
+
+extras 3rd effects 

@@ -1,5 +1,8 @@
-// array of images 
-arrayOfImages=[]
-arrayOfImages.push("./BodyBuilder.png", "./Cyclist.png", "./Gymnast.png", "./HorseRider.png", "./Parasailor.png", "./RockClimber.png", "RollerBlader.png", "./TennisPlayer.png")
-console.log(arrayOfImages)
-
+//create an object that will all cards from html 
+const cards=document.querySelectorAll(".gamecard")
+//perform a function to flip the card 
+function flipCard() {
+    this.classList.toggle('flip')
+}
+//create an event to add event listener to the card to flip when card is clicked 
+cards.forEach(card => card.addEventListener('click', flipCard))
