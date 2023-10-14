@@ -21,7 +21,7 @@ h3{
     display:flex;
     justify-content: space-between;
     align-items: center;
-    width: 30vw;
+    width: 82vw;
     height: 3vh;
     border: 2px solid green;
     padding: 2%;
@@ -78,4 +78,15 @@ transform: rotateY(180deg)
     height: 100%;
     background-color: lightblue;
     transform: rotateY(180deg) translateZ(50px); /*this make back card rotate 180 from the bottom to the front  */
+}
+
+.timer {
+    font-size: 2em;
+    font-family: 'Arial', sans-serif;
+}
+#popUpWindowWin{
+position:absolute;
+top:0;
+left:0;
+display: none;
 }

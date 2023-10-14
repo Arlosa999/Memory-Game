@@ -1,88 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Game</title>
-    <link rel="stylesheet" href="./style.css">
-    <script src="./logic.js" defer ></script>
-</head>
-<body class="body-2">
-    <h1 class="gamename"> Memory Game </h1>
-    <div class="trackerbox" >
-        <div class="trackers">Lives: </div>
-        <div class="reset">
-            <button class="resetbutton">Reset</button>
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./logic.js" defer></script>
+  </head>
+  <body class="body-2">
+    <h1 class="gamename">Memory Game</h1>
+    <div class="trackerbox">
+      <div class="trackers">Lives:</div>
+      <div class="reset">
+        <button id="resetbutton">Reset</button>
+      </div>
+      <div class="trackers">
+        Timer:
+        <div class="timer">
+          <span id="minutes">00</span>:<span id="seconds">00</span>
         </div>
-        <div class="trackers">Timer:</div>
+      </div>
     </div>
-   <section class="gameimages">
-    <div class="gamecard" data-ID="bodyBuilder">
-        <img class="front-face" src="img/Olympics.png" alt="Backface"/>
-        <img class="back-face" src="img/BodyBuilder.png" alt="BodyBuilder"/>
+    <section class="gameimages">
+      <div class="gamecard" data-id="bodyBuilder">
+        <img class="front-face" src="img/Olympics.png" alt="Backface" />
+        <img class="back-face" src="img/BodyBuilder.png" alt="BodyBuilder" />
+      </div>
+      <div class="gamecard" data-id="cyclist">
+        <img class="front-face" src="img/Olympics.png" alt="Backface" />
+        <img class="back-face" src="img/Cyclist.png" alt="Cyclist" />
+      </div>
+      <div class="gamecard" data-id="gymnast">
+        <img class="front-face" src="img/Olympics.png" alt="Backface" />
+        <img class="back-face" src="img/Gymnast.png" alt="Gymnast" />
+      </div>
+      <div class="gamecard" data-id="horseRider">
+        <img class="front-face" src="img/Olympics.png" alt="Backface" />
+        <img class="back-face" src="img/HorseRider.png" alt="HorseRider" />
+      </div>
+      <div class="gamecard" data-id="parasailor">
+        <img class="front-face" src="img/Olympics.png" alt="Backface" />
+        <img class="back-face" src="img/Parasailor.png" alt="Parasailor" />
+      </div>
+      <div class="gamecard" data-id="rockclimber">
+        <img class="front-face" src="img/Olympics.png" alt="Backface" />
+        <img class="back-face" src="img/Rockclimber.png" alt="Rockclimber" />
+      </div>
+      <div class="gamecard" data-id="rollerblader">
+        <img class="front-face" src="img/Olympics.png" alt="Backface" />
+        <img class="back-face" src="img/RollerBlader.png" alt="RollerBlader" />
+      </div>
+      <div class="gamecard" data-id="tennisPlayer">
+        <img class="front-face" src="img/Olympics.png" alt="Backface" />
+        <img class="back-face" src="img/TennisPlayer.png" alt="TennisPlayer" />
+      </div>
+      <div class="gamecard" data-id="bodyBuilder">
+        <img class="front-face" src="img/Olympics.png" alt="Backface" />
+        <img class="back-face" src="img/BodyBuilder.png" alt="BodyBuilder" />
+      </div>
+      <div class="gamecard" data-id="cyclist">
+        <img class="front-face" src="img/Olympics.png" alt="Backface" />
+        <img class="back-face" src="img/Cyclist.png" alt="Cyclist" />
+      </div>
+      <div class="gamecard" data-id="gymnast">
+        <img class="front-face" src="img/Olympics.png" alt="Backface" />
+        <img class="back-face" src="img/Gymnast.png" alt="gymnast" />
+      </div>
+      <div class="gamecard" data-id="horseRider">
+        <img class="front-face" src="img/Olympics.png" alt="Backface" />
+        <img class="back-face" src="img/HorseRider.png" alt="HorseRider" />
+      </div>
+      <div class="gamecard" data-id="parasailor">
+        <img class="front-face" src="img/Olympics.png" alt="Backface" />
+        <img class="back-face" src="img/Parasailor.png" alt="Parasailor" />
+      </div>
+      <div class="gamecard" data-id="rockclimber">
+        <img class="front-face" src="img/Olympics.png" alt="Backface" />
+        <img class="back-face" src="img/Rockclimber.png" alt="Rockclimber" />
+      </div>
+      <div class="gamecard" data-id="rollerblader">
+        <img class="front-face" src="img/Olympics.png" alt="Backface" />
+        <img class="back-face" src="img/RollerBlader.png" alt="RollerBlader" />
+      </div>
+      <div class="gamecard" data-id="tennisPlayer">
+        <img class="front-face" src="img/Olympics.png" alt="Backface" />
+        <img class="back-face" src="img/TennisPlayer.png" alt="TennisPlayer" />
+      </div>
+    </section>
+    <div id="popUpWindowWin">
+        <div class="wingame">You Win the game!</div>
+        <div class="time">Timer</div>
+        <div class="startAgain">
+            <button id="startAgain"></button>
+        </div>
     </div>
-    <div class="gamecard" data-ID="cyclist">
-        <img class="front-face" src="img/Olympics.png" alt="Backface"/>
-        <img class="back-face" src="img/Cyclist.png" alt="Cyclist"/>
-    </div>
-    <div class="gamecard" data-ID="gymnast">
-        <img class="front-face" src="img/Olympics.png" alt="Backface"/>
-        <img class="back-face" src="img/Gymnast.png" alt="Gymnast"/>
-    </div>
-    <div class="gamecard" data-ID="horseRider">
-        <img class="front-face" src="img/Olympics.png" alt="Backface"/>
-        <img class="back-face" src="img/HorseRider.png" alt="HorseRider"/>
-    </div>
-    <div class="gamecard" data-ID="parasailor">
-        <img class="front-face" src="img/Olympics.png" alt="Backface"/>
-        <img class="back-face" src="img/Parasailor.png" alt="Parasailor"/>
-    </div>
-    <div class="gamecard" data-ID="rockclimber">
-        <img class="front-face" src="img/Olympics.png" alt="Backface"/>
-        <img class="back-face" src="img/Rockclimber.png" alt="Rockclimber"/>
-    </div>
-    <div class="gamecard" data-ID="rollerblader">
-        <img class="front-face" src="img/Olympics.png" alt="Backface"/>
-        <img class="back-face" src="img/RollerBlader.png" alt="RollerBlader"/>
-    </div>
-    <div class="gamecard" data-ID="tennisPlayer">
-        <img class="front-face" src="img/Olympics.png" alt="Backface"/>
-        <img class="back-face" src="img/TennisPlayer.png" alt="TennisPlayer"/>
-    </div>
-    <div class="gamecard" data-ID="bodyBuilder">
-        <img class="front-face" src="img/Olympics.png" alt="Backface"/>
-        <img class="back-face" src="img/BodyBuilder.png" alt="BodyBuilder"/>
-    </div>
-    <div class="gamecard" data-id="cyclist">
-        <img class="front-face" src="img/Olympics.png" alt="Backface"/>
-        <img class="back-face" src="img/Cyclist.png" alt="Cyclist"/>
-    </div>
-    <div class="gamecard" data-ID="gymnast">
-        <img class="front-face" src="img/Olympics.png" alt="Backface"/>
-        <img class="back-face" src="img/Gymnast.png" alt="Gymnast"/>
-    </div>
-    <div class="gamecard" data-ID="horseRider">
-        <img class="front-face" src="img/Olympics.png" alt="Backface"/>
-        <img class="back-face" src="img/HorseRider.png" alt="HorseRider"/>
-    </div>
-    <div class="gamecard" data-ID="parasailor">
-        <img class="front-face" src="img/Olympics.png" alt="Backface"/>
-        <img class="back-face" src="img/Parasailor.png" alt="Parasailor"/>
-    </div>
-    <div class="gamecard" data-ID="rockclimber">
-        <img class="front-face" src="img/Olympics.png" alt="Backface"/>
-        <img class="back-face" src="img/Rockclimber.png" alt="Rockclimber"/>
-    </div>
-    <div class="gamecard" data-ID="rollerblader">
-        <img class="front-face" src="img/Olympics.png" alt="Backface"/>
-        <img class="back-face" src="img/RollerBlader.png" alt="RollerBlader"/>
-    </div>
-    <div class="gamecard" data-ID="tennisPlayer">
-        <img class="front-face" src="img/Olympics.png" alt="Backface"/>
-        <img class="back-face" src="img/TennisPlayer.png" alt="TennisPlayer"/>
-    </div>
-   </section>
-    </div>
-   
-</body>
+  </body>
 </html>
