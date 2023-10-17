@@ -1,12 +1,16 @@
 /* Start Page  */
 h1{
     text-align: center;
+    font-family: tilt neon;
+
 }
 h3{
     text-align: center;
+    font-family: tilt neon;
 }
 .startButton{
     text-align: center;
+    font-family: tilt neon;
 }
 
 /* Game Page */
@@ -23,9 +27,13 @@ h3{
     align-items: center;
     width: 82vw;
     height: 3vh;
-    border: 2px solid green;
+    background-color:#F9DAD0;
+    border-radius: 15px;
     padding: 2%;
     margin: 5px;
+    color: black;
+    font-family: tilt neon;
+
 }
 .trackers{
     display: inline-block;
@@ -40,11 +48,13 @@ img{
     width: 100%;
 }
 .gameimages{
-width: 500px;
-height: 500px;
-border: 4px solid olive;
-display: flex;
-flex-wrap: wrap;
+    width: 500px;
+    height: 500px;
+    border: 4px solid #818AA3;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: f9dad0;
+    border-radius: 15px;
 }
 .gamecard{
     width: 113px;
@@ -58,12 +68,12 @@ flex-wrap: wrap;
     transition: transform 1s;
 }
 .memory-card:active{
-transform: scale(.97);
-transition: transform .2s;
+    transform: scale(.97);
+    transition: transform .2s;
 }
 
 .gamecard.flip{
-transform: rotateY(180deg) 
+    transform: rotateY(180deg) 
 }
 .front-face{
     width: 100%;
@@ -84,9 +94,43 @@ transform: rotateY(180deg)
     font-size: 2em;
     font-family: 'Arial', sans-serif;
 }
-#popUpWindowWin{
-position:absolute;
-top:0;
-left:0;
-display: none;
+#popUpWindowWin {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    height: 200px;
+    background-color:#F9DAD0;
+    border-radius: 15px;
+    padding: 20px;
+    display: none;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); 
+    z-index: 1000;
+    font-family: tilt neon;
+}
+.wingame{
+    color: #333;
+}
+
+#startAgain{
+    background-color: #818AA3;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 15px;
+    font-family: tilt neon;
+}
+#resetbutton{
+    background-color: #818AA3;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 15px;
+    font-family: tilt neon;
 }

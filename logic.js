@@ -13,7 +13,7 @@ cards.forEach(card => card.addEventListener('click',(e)=>{      //e-means event
 
 console.log(e.target.parentElement)
 console.log(e.target.parentElement.dataset.id)
-if(!e.target.parentElement.classList.contains("flip")) {
+if(!e.target.parentElement.classList.contains("flip")&& !e.target.parentElement.classList.contains("gameimages")) {
     e.target.parentElement.classList.toggle("flip")  //checking if card has been flipped 
     guess.push(e.target.parentElement.dataset.id)
 }
@@ -61,17 +61,35 @@ function shuffleCards() {
         card.style.order = randomPosition;
     });
 }  
+// function confettiCongratulations() {
+//     particlesJS('confetti', {
+//         particles: {
+//             number: { value: 100 },
+//             color: { value: '#4caf50' },
+//             shape: { type: 'circle' },
+//             size: { value: 5 },
+//             move: { enable: true, speed: 6, direction: 'none', random: true, straight: false, out_mode: 'out' }
+//         },
+//         interactivity: {
+//             events: { onhover: { enable: false, mode: 'repulse' } }
+//         }
+//     });
+// }
 
 function winLogic (){
     const flippedCards=document.querySelectorAll('.flip')
+    console.log(flippedCards.length)
+    console.log(cards.length)
     if(flippedCards.length===cards.length){
         const winTheGame=document.getElementById("popUpWindowWin")
         winTheGame.style.display="block"
+        // confettiCongratulations()
         console.log("winTheGame")
     }
-    
 }
 shuffleCards()
+
+
 //timer 
 // document.addEventListener(".resetbutton", function () {
 //     // Set the target date and time (in this example, 5 minutes)
