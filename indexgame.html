@@ -8,7 +8,8 @@
     <script src="./logic.js" defer></script>
   </head>
   <body class="body-2">
-    <h1 class="gamename">Memory Game</h1>
+    <div class="mainpage">
+        <h1 class="gamename">Memory Game</h1>
     <div class="trackerbox">
       <div class="trackers">Lives:</div>
       <div class="reset">
@@ -16,7 +17,7 @@
       </div>
       <div class="trackers">
         Timer:
-        <div class="timer">
+        <div id="timer">
           <span id="minutes">00</span>:<span id="seconds">00</span>
         </div>
       </div>
@@ -87,6 +88,7 @@
         <img class="back-face" src="img/TennisPlayer.png" alt="TennisPlayer" />
       </div>
     </section>
+</div>
     <div class="confetti" id="popUpWindowWin">
         <h2 class="wingame">Congrats Olympian!</h2>
         <h3 class="wingame"> You won the game!</h3>
@@ -94,6 +96,41 @@
             <button id="startAgain">Start again!</button>
         </div>
     </div>
+    <div class="startgame" id="popUpWindowStart">
+        <h1 class="startgame">Memory Game</h1>
+        <div class="rules">
+        <h3>Game Rules</h3>
+            <div class="paragraph">
+                <h4>Game Setup: </h4>
+                <p>The game board consists of a grid of face-down cards.
+                Cards are arranged randomly on the board, with each card having an identical twin.</p>
+                <h4>Card Matching:</h4>
+                <p>Each turn, the player flips over two cards.
+                    If the cards match, they remain face-up, and the player earns points.
+                    If the cards do not match, they are turned face-down again, and the player's score is not affected.</p>
+                <h4>Game Completion: </h4>
+                <p>The game is won when all pairs of cards are successfully matched and face-up.
+                    The game is lost when there more than three attemts to open the same card without finding a pair. 
+                    Players strive to complete the game with the fewest moves and in the shortest time possible.</p>
+                <h4>Tips for Success: </h4>
+                <ul>
+                    <li>Concentrate and focus on the card positions.</li>
+                    <li>Create a mental map of the card pairs.</li>
+                    <li>Develop a strategy for remembering card locations efficiently.</li>
+                </ul>
+            </div>
+    </div>
+    <div class="startButton">
+        <button id="play">Play</button>
+    </div>
+    <div id="popUpWindowLose">
+        <h2 class="losegame">It's not your day, Olympian!</h2>
+        <h3 class="losegame">You need to practice more!</h3>
+        <div class="startAgainlose">
+            <button id="startAgainlose">Start again!</button>
+        </div>
+    </div>  
+
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
   </body>
 </html>

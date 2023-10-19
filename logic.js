@@ -3,8 +3,29 @@ const cards=document.querySelectorAll(".gamecard")
 // empty array for flipping cards 
 let guess=[]
 
+let clickCount = 0;
+let timer;
+const maxClicks = 50; // Maximum allowed clicks
+const maxTimeInSeconds = 10; // Maximum allowed time in seconds
+let remainingTime = maxTimeInSeconds;
+
+//buttons 
 const resetButton = document.getElementById("resetbutton");
 resetButton.addEventListener("click", resetGame);
+
+const startAgain=document.getElementById("startAgain");
+startAgain.addEventListener("click", resetGame)
+
+const startAgainLose=document.getElementById("startAgainlose");
+startAgainLose.addEventListener("click", resetGame)
+
+
+const startGameButton=document.getElementById("play");
+startGameButton.addEventListener("click", () => {
+    console.log('startgame ran')
+    startGame()
+    // window.location = 'indexgame.html'
+})
 
 // Trucking 2 guesses so only 2 cards are flipping and if match they stay front-face if doesnr they turn back 
 
@@ -13,9 +34,16 @@ cards.forEach(card => card.addEventListener('click',(e)=>{      //e-means event
 
 console.log(e.target.parentElement)
 console.log(e.target.parentElement.dataset.id)
+
+// function handleCardClick(e) {
 if(!e.target.parentElement.classList.contains("flip")&& !e.target.parentElement.classList.contains("gameimages")) {
     e.target.parentElement.classList.toggle("flip")  //checking if card has been flipped 
     guess.push(e.target.parentElement.dataset.id)
+    // clickCount ++;
+    // if (clickCount > maxClicks || timerExpired()) {
+    //     loseGame();
+    // }
+// }
 }
 //checking if card is flipped 
 console.log(guess)
@@ -44,8 +72,19 @@ if (guess.length===2){
         } 
     }   
     ))  
-function resetGame() {
+function startGame(){
+    console.log('start func')
+    shuffleCards()
+    const popUpStartWindow=document.getElementById("popUpWindowStart")
+    popUpStartWindow.style.display = "none";
+    updateTimerDisplay()
+    startTimer()
+    // removeEventListener('click', startGameButton, false)
+}
 
+function resetGame() {
+    const popUpWindow = document.getElementById("popUpWindowWin");
+    popUpWindow.style.display = "none";
     // Reset all cards to face down
     cards.forEach(card => {
         if (card.classList.contains("flip")) {
@@ -54,6 +93,12 @@ function resetGame() {
     });
     shuffleCards()
 }
+
+function updateTimerDisplay() {
+    const timerDisplay = document.getElementById("timer");
+    timerDisplay.textContent = remainingTime;
+}
+
 function shuffleCards() {
     const cardArray = Array.from(cards);
     cardArray.forEach(card => {
@@ -61,20 +106,6 @@ function shuffleCards() {
         card.style.order = randomPosition;
     });
 }  
-// function confettiCongratulations() {
-//     particlesJS('confetti', {
-//         particles: {
-//             number: { value: 100 },
-//             color: { value: '#4caf50' },
-//             shape: { type: 'circle' },
-//             size: { value: 5 },
-//             move: { enable: true, speed: 6, direction: 'none', random: true, straight: false, out_mode: 'out' }
-//         },
-//         interactivity: {
-//             events: { onhover: { enable: false, mode: 'repulse' } }
-//         }
-//     });
-// }
 
 function winLogic (){
     const flippedCards=document.querySelectorAll('.flip')
@@ -87,40 +118,51 @@ function winLogic (){
         console.log("winTheGame")
     }
 }
-shuffleCards()
 
+function loseGame(){
+    console.log("Remaining Time:", remainingTime);
+    if(remainingTime<=0){
+        console.log('lose the game')
+        const loseTheGame=document.getElementById("popUpWindowLose")
+        loseTheGame.style.display="block"
+    }
+
+}
+
+//figure out how to count each click 
+//if you clicked more than 48 times you lose the game 
+// if it took longer than 30 seconds to win the game you lose. 
+
+
+shuffleCards()
+// startGame()
 
 //timer 
-// document.addEventListener(".resetbutton", function () {
-//     // Set the target date and time (in this example, 5 minutes)
-//     const targetTime = new getTime() + 5 * 60 * 1000;
+function startTimer() {
+    remainingTime = maxTimeInSeconds;
+    updateTimerDisplay(); // Initial display
+    timer = setInterval(() => {
+        remainingTime--;
+        updateTimerDisplay();
+        if (remainingTime <= 0) {
+            loseGame();
+        }
+    }, 1000);
+}
 
-//     // Update the timer every second
-//     const timerInterval = setInterval(updateTimer, 1000);
+function stopTimer() {
+    clearInterval(timer);
+}
 
-//     function updateTimer() {
-//         const currentTime = new getTime();
-//         const timeDifference = targetTime - currentTime;
+function timerExpired() {
+    return remainingTime <= 0;;
+}
 
-//         // Calculate minutes and seconds
-//         const minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
-//         const seconds = Math.floor((timeDifference % (1000 * 60)) / 1000);
+function resetClickCount() {
+    clickCount = 0;
+}
 
-//         // Display the time in the HTML
-//         document.getElementById("minutes").innerText = padZero(minutes);
-//         document.getElementById("seconds").innerText = padZero(seconds);
 
-//         // Check if the timer has reached 0
-//         if (timeDifference < 0) {
-//             clearInterval(timerInterval);
-//             alert("Time's up!");
-//         }
-//     }
-//     // Function to pad zero for single-digit minutes and seconds
-//     function padZero(value) {
-//         return value < 10 ? "0" + value : value;
-//     }
-// });
 // console.log(event.target.parentElement)
 // flipCard(event.target.parentElement)
 
