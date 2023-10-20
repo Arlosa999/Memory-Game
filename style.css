@@ -32,9 +32,9 @@ h3{
     display:flex;
     justify-content: space-between;
     align-items: center;
-    width: 82vw;
+    width: 45vw;
     height: 3vh;
-    background-color:#F9DAD0;
+    background-color:white;
     border-radius: 15px;
     padding: 2%;
     margin: 5px;
@@ -62,6 +62,7 @@ img{
     flex-wrap: wrap;
     background-color: f9dad0;
     border-radius: 15px;
+    margin: 0 auto;
 }
 .gamecard{
     width: 113px;
