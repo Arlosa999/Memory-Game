@@ -29,9 +29,9 @@ The Memory Game is my first attempt to create a front-end application. The inten
 * Users can see a pop-up window if the won the game or lost the game and play again 
 * Users can match all 16 cards
   
-## Whiteboard Images
-*Original Whiteboard sketch
-*[Miro](https://miro.com/app/board/uXjVNdX8i8M=/)
+## Whiteboard Scetches
+* Original Whiteboard sketch
+* [Miro](https://miro.com/app/board/uXjVNdX8i8M=/)
 
 ## Trello Planning
 * All planning in notebooks
@@ -43,14 +43,15 @@ The Memory Game is my first attempt to create a front-end application. The inten
 
 ## <a name="nextsteps"></a>Project Next Steps
 * Users can choose multiple players
+* Make it responsive on mobile
 * Users can have multiple level of difficulty
-* UI will be enhenced
+* UI will be enhanced
 
 ## <a name="deployment"></a>Deployed Link
-[Netlify](https://thejoospod.netlify.app)
+[Netlify](https://arlosa999.github.io/Memory-Game/)
 
 * You can view the repository:
-[Github.com](https://github.com/Gr8ness21/joosPodcast)
+[Github.com](https://github.com/Arlosa999/Memory-Game)
 * If unable to view please go live locally through VS Code
     
 ## Works Cited:
