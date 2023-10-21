@@ -17,25 +17,21 @@ The "Joos" podcast site is my first attempt to create a multi-page website. The 
 
 ## <a name="technologiesused"></a>Technologies Used
 * JavaScript
-* HTML5
-* CSS3
-* jQuery
+* HTML
+* CSS
 
 
 ## Features
-* Users can read interactive descriptions of podcast hosts
-* Users can get insight into content provided by podcast creators
-* Users can listen to podcast episodes
-* Users can purchase games of interest advertised by hosts
-* Users can see up to date news on all things gaming
-* Users will be able to access shop items and purchase at later  date
-* Users can view hosts highlighted clips
-* Users can see targeted ad content placed by hosts
-* Users can view live gaming stream from twitch
-
+* Users can read instructions and start the game
+* Users can flip 2 cards at the same time
+* Users can see timer and have only 60 seconds to win the game
+* Users can match 2 the same cards and see it on the screen 
+* Users can see a pop up windows if the won the game or lost the game and play agan 
+* Users can match all 16 cards
+  
 ## Whiteboard Images
 *Original Whiteboard sketch
-<img src="./images/whiteboard.jpg" alt="Original Sketch"/>
+<img src="./img_library/miro.jpg" alt="Original Sketch"/>
 
 ## Trello Planning
 * All planning in notebooks
