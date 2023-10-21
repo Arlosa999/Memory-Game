@@ -48,7 +48,7 @@ The Memory Game is my first attempt to create a front-end application. The inten
 * UI will be enhanced
 
 ## <a name="deployment"></a>Deployed Link
-[Netlify](https://arlosa999.github.io/Memory-Game/)
+[Memory_Game](https://arlosa999.github.io/Memory-Game/)
 
 * You can view the repository:
 [Github.com](https://github.com/Arlosa999/Memory-Game)
