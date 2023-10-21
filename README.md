@@ -5,7 +5,7 @@ The goal of the game is to find matching pairs of cards on the game board. Each 
 <img src="./Img_library/Game.png" alt="Game Screen"/>
 
 ## Description
-The "Joos" podcast site is my first attempt to create a multi-page website. The hosts, segments, and content of this site are all original ideas. The goal was to show createive ways to display content while making a webpages that are interactive and engaging.
+The Memory Game is my first attempt to create a front-end application. The intention of developing this game is is to demonstrate and practice javascript logic and connect it with HTML and style in CSS in a very condensed period. 
 
 ## Table of Contents
 * [Technologies Used](#technologiesused)
@@ -31,7 +31,7 @@ The "Joos" podcast site is my first attempt to create a multi-page website. The 
   
 ## Whiteboard Images
 *Original Whiteboard sketch
-[Miro](https://miro.com/app/board/uXjVNdX8i8M=/)
+*[Miro](https://miro.com/app/board/uXjVNdX8i8M=/)
 
 ## Trello Planning
 * All planning in notebooks
