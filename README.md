@@ -2,7 +2,7 @@
 The goal of the game is to find matching pairs of cards on the game board. Each turn, flip over two cards. If they match, great! They stay face-up. If not, no worries—just remember where they are for your next turn. You have 3 trials to open the same card, if you missed to match that card, your game is over and you need to try again. 
 
 #### A site built from scratch as my first website project.
-<img src="./Img_library/Game.png" alt="Game start Screen"/>
+<img src="./Img_library/Start.png" alt="Game start Screen"/>
 
 ## Description
 The "Joos" podcast site is my first attempt to create a multi-page website. The hosts, segments, and content of this site are all original ideas. The goal was to show createive ways to display content while making a webpages that are interactive and engaging.
