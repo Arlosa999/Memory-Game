@@ -35,6 +35,7 @@ The "Joos" podcast site is my first attempt to create a multi-page website. The 
 
 ## Trello Planning
 * All planning in notebooks
+* img src="./Img_library/trello.png" alt="Trello"/>
 
 ## <a name="design"></a>Design
 * Design elements implemented using HTML5 and CSS3. 
